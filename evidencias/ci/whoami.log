@@ -1,0 +1,56 @@
+2026-10-13T06:21:00.009367Z 00O Running with gitlab-runner 19.4.1 (3c39fceb)
+2026-10-13T06:21:00.009391Z 00O   on laptop-aaron-lab9 aGzpPjI-R, system ID: r_Vpj1ULCgFpGv
+2026-10-13T06:21:00.009392Z 00O   UUID: 01a133d6-c32c-7d12-8617-65adbfdb131e
+2026-10-13T06:21:00.009441Z 00O section_start:1791872460:prepare_executor
+
+2026-10-13T06:21:00.009443Z 00O+Preparing the "docker" executor
+2026-10-13T06:21:00.029462Z 00O Using Docker executor with image python:3.11-slim ...
+2026-10-13T06:21:00.033945Z 00O Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:arm64-v19.4.1
+2026-10-13T06:21:00.033967Z 00O Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:arm64-v19.4.1
+2026-10-13T06:21:00.036800Z 00O Authenticating with credentials from job payload (GitLab Registry)
+2026-10-13T06:21:00.036815Z 00O Pulling docker image registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:arm64-v19.4.1 ...
+2026-10-13T06:21:08.222551Z 00O Using docker image sha256:49c4d312526b30baeffee8778c99bfd8bd79877dbb52067cb3f3c54e1973fda1 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:arm64-v19.4.1 with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:49c4d312526b30baeffee8778c99bfd8bd79877dbb52067cb3f3c54e1973fda1 ...
+2026-10-13T06:21:09.115811Z 00O Using effective pull policy of [always] for container python:3.11-slim
+2026-10-13T06:21:09.212842Z 00O Pulling docker image python:3.11-slim ...
+2026-10-13T06:21:10.694132Z 00O Using docker image sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce for python:3.11-slim with digest python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce ...
+2026-10-13T06:21:10.694148Z 00O section_end:1791872470:prepare_executor
+
+2026-10-13T06:21:10.697615Z 00O+section_start:1791872470:prepare_script
+
+2026-10-13T06:21:10.697624Z 00O+Preparing environment
+2026-10-13T06:21:10.756971Z 00O Using effective pull policy of [always] for container sha256:49c4d312526b30baeffee8778c99bfd8bd79877dbb52067cb3f3c54e1973fda1
+2026-10-13T06:21:10.994716Z 01O Running on runner-agzppji-r-project-87551374-concurrent-0 via 120f5ccc8c6d...
+2026-10-13T06:21:11.067272Z 00O section_end:1791872471:prepare_script
+
+2026-10-13T06:21:11.067881Z 00O+section_start:1791872471:get_sources
+
+2026-10-13T06:21:11.067893Z 00O+Getting source from Git repository
+2026-10-13T06:21:11.265692Z 01O Gitaly correlation ID: a49c3db6fa65b53e-LIM
+2026-10-13T06:21:11.269280Z 01O Fetching changes with git depth set to 20...
+2026-10-13T06:21:11.270958Z 01O Initialized empty Git repository in /builds/aaron.timana/gitlab_lambda_demo/.git/
+2026-10-13T06:21:11.272824Z 01O Created fresh repository.
+2026-10-13T06:21:13.635995Z 01O Checking out 51c7f62a as detached HEAD (ref is main)...
+2026-10-13T06:21:13.675641Z 01O 
+2026-10-13T06:21:13.675647Z 01O Skipping Git submodules setup
+2026-10-13T06:21:13.768290Z 00O section_end:1791872473:get_sources
+
+2026-10-13T06:21:13.769474Z 00O+section_start:1791872473:step_script
+
+2026-10-13T06:21:13.769484Z 00O+Executing "step_script" stage of the job script
+2026-10-13T06:21:13.769493Z 00O Using effective pull policy of [always] for container python:3.11-slim
+2026-10-13T06:21:13.832380Z 00O Using docker image sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce for python:3.11-slim with digest python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce ...
+2026-10-13T06:21:14.093330Z 01O $ echo "Runner: $CI_RUNNER_DESCRIPTION" # collapsed multi-line command
+2026-10-13T06:21:14.093356Z 01O Runner: laptop-aaron-lab9
+2026-10-13T06:21:14.093356Z 01O Runner ID: 57342024
+2026-10-13T06:21:14.093357Z 01O Runner tags: ["laptop"]
+2026-10-13T06:21:14.093357Z 01O Project: aaron.timana/gitlab_lambda_demo
+2026-10-13T06:21:14.093712Z 01O Linux runner-agzppji-r-project-87551374-concurrent-0 6.10.14-linuxkit #1 SMP Thu Mar 20 16:32:56 UTC 2025 aarch64 GNU/Linux
+2026-10-13T06:21:14.095366Z 01O Python 3.11.17
+2026-10-13T06:21:14.175803Z 00O section_end:1791872474:step_script
+
+2026-10-13T06:21:14.176732Z 00O+section_start:1791872474:cleanup_file_variables
+
+2026-10-13T06:21:14.176740Z 00O+Cleaning up project directory and file based variables
+2026-10-13T06:21:14.405000Z 00O section_end:1791872474:cleanup_file_variables
+
+2026-10-13T06:21:14.491112Z 00O Job succeeded

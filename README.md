@@ -14,9 +14,12 @@ es **100 %**, excluyendo el bloque que inicia Uvicorn manualmente.
 un parámetro inválido. Las evidencias reales están en `evidencias/local/`.
 
 El runner local está registrado y Online (ID 57342024). `@pytuxi` tiene acceso
-Reporter. El código y el pipeline ya están subidos a GitLab. Su ejecución está bloqueada
-por la verificación de identidad que exige GitLab al titular de la cuenta. Una prueba local no demuestra
-un pipeline en verde. Revisar [checklist de entrega](docs/entrega.md).
+Reporter. El código y el pipeline ya están subidos a GitLab. Los cinco jobs pasaron en el
+[pipeline 2941167512](https://gitlab.com/aaron.timana/gitlab_lambda_demo/-/pipelines/2941167512). Los artifacts descargados confirman
+16 pruebas sin fallos, 100 % de cobertura y respuestas JSON correctas.
+La segunda ejecución [2941199447](https://gitlab.com/aaron.timana/gitlab_lambda_demo/-/pipelines/2941199447)
+también pasó y confirmó la restauración de las caches pip/npm.
+Revisar [checklist de entrega](docs/entrega.md).
 
 ## Qué hace cada componente
 

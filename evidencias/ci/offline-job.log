@@ -1,0 +1,297 @@
+2026-10-13T06:21:49.064314Z 00O Running with gitlab-runner 19.5.0~pre.2302.g6414598a (6414598a)
+2026-10-13T06:21:49.064351Z 00O   on k8s.saas-linux-small-amd64.runners-manager.gitlab.com/default nezyxEJex, system ID: r_4kozLElAFZZE
+2026-10-13T06:21:49.064354Z 00O   UUID: 019fd6c6-56c4-78a2-8961-bbb53e204387
+2026-10-13T06:21:49.064362Z 00O   feature flags: FF_USE_GIT_PROACTIVE_AUTH:true, FF_HASH_CACHE_KEYS:true, FF_MACHINE_OPTIONS_EXPAND_ENV:true, FF_DOCKER_MACHINE_JSON_OUTPUT:true
+2026-10-13T06:21:49.064403Z 00O section_start:1791872509:prepare_executor
+
+2026-10-13T06:21:49.064407Z 00O+Preparing the "docker+machine" executor
+2026-10-13T06:21:49.151404Z 00O Using Docker executor with image nikolaik/python-nodejs:python3.11-nodejs20 ...
+2026-10-13T06:21:49.151473Z 00O Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a  (overridden, default would be  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-v19.5.0 )
+2026-10-13T06:21:49.151525Z 00O Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a
+2026-10-13T06:21:49.152347Z 00O Authenticating with credentials from job payload (GitLab Registry)
+2026-10-13T06:21:49.152359Z 00O Pulling docker image registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a ...
+2026-10-13T06:21:50.945949Z 00O Using docker image sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:932a5e67332b363468a001dc40a6195a6671eb5f6e449ea3edaf6cbcc6e1d2af ...
+2026-10-13T06:21:52.689176Z 00O Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a  (overridden, default would be  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-v19.5.0 )
+2026-10-13T06:21:52.689195Z 00O Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a
+2026-10-13T06:21:52.690204Z 00O Using docker image sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:932a5e67332b363468a001dc40a6195a6671eb5f6e449ea3edaf6cbcc6e1d2af ...
+2026-10-13T06:21:52.690223Z 00O Using effective pull policy of [always] for container nikolaik/python-nodejs:python3.11-nodejs20
+2026-10-13T06:21:52.690835Z 00O Pulling docker image nikolaik/python-nodejs:python3.11-nodejs20 ...
+2026-10-13T06:22:15.924228Z 00O Using docker image sha256:d14ae8d7fcee933e82c9f62eded621110f227bc96363ca5449d36897af7bea1c for nikolaik/python-nodejs:python3.11-nodejs20 with digest nikolaik/python-nodejs@sha256:8f958bdc1b4a422bfafd97cab4f69836401f616ae985d4b57a53d254f5bcb038 ...
+2026-10-13T06:22:15.924317Z 00O section_end:1791872535:prepare_executor
+
+2026-10-13T06:22:15.924450Z 00O+section_start:1791872535:prepare_script
+
+2026-10-13T06:22:15.924454Z 00O+Preparing environment
+2026-10-13T06:22:15.924509Z 00O Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a  (overridden, default would be  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-v19.5.0 )
+2026-10-13T06:22:15.924519Z 00O Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a
+2026-10-13T06:22:15.925564Z 00O Using docker image sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:932a5e67332b363468a001dc40a6195a6671eb5f6e449ea3edaf6cbcc6e1d2af ...
+2026-10-13T06:22:15.925576Z 00O Using effective pull policy of [always] for container sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28
+2026-10-13T06:22:20.268852Z 01O Running on runner-nezyxejex-project-87551374-concurrent-0 via runner-nezyxejex-s-l-s-amd64-1791872475-2c1d9b0f...
+2026-10-13T06:22:20.271096Z 01O Running on CPU: INTEL(R) XEON(R) PLATINUM 8581C CPU @ 2.10GHz (avx, avx2, avx512f)
+2026-10-13T06:22:20.422568Z 00O section_end:1791872540:prepare_script
+
+2026-10-13T06:22:20.422978Z 00O+section_start:1791872540:get_sources
+
+2026-10-13T06:22:20.422984Z 00O+Getting source from Git repository
+2026-10-13T06:22:20.754063Z 01O Gitaly correlation ID: f3adc3e1f3c24f3eaf4871d937e4951e
+2026-10-13T06:22:20.759189Z 01O Fetching changes with git depth set to 20...
+2026-10-13T06:22:20.761826Z 01O Initialized empty Git repository in /builds/aaron.timana/gitlab_lambda_demo/.git/
+2026-10-13T06:22:20.763792Z 01O Created fresh repository.
+2026-10-13T06:22:21.408209Z 01O Checking out 51c7f62a as detached HEAD (ref is main)...
+2026-10-13T06:22:21.457419Z 01O 
+2026-10-13T06:22:21.457442Z 01O Skipping Git submodules setup
+2026-10-13T06:22:21.457447Z 01O $ git remote set-url origin "${CI_REPOSITORY_URL}" || echo 'Not a git repository; skipping'
+2026-10-13T06:22:21.610976Z 00O section_end:1791872541:get_sources
+
+2026-10-13T06:22:21.874860Z 00O+section_start:1791872541:restore_cache
+
+2026-10-13T06:22:21.874870Z 00O+Restoring cache
+2026-10-13T06:22:22.240663Z 01O Checking cache for npm-node20-02cf922d233c639b0b52aaddabe92d6b7a651b2e-protected...
+2026-10-13T06:22:22.291511Z 01E Using presigned URL for cache download             
+2026-10-13T06:22:22.353047Z 01E Selecting primary cache URL                         alternate_modified=0001-01-01 00:00:00 +0000 UTC alternate_url=https://storage.googleapis.com/gitlab-com-runners-cache/project/87551374/npm-node20-02cf922d233c639b0b52aaddabe92d6b7a651b2e-protected primary_modified=0001-01-01 00:00:00 +0000 UTC primary_url=https://storage.googleapis.com/gitlab-com-runners-cache/project/87551374/e0/e0fbd6314495a313d05d8b565cf97b5ca8243833536f0cb8918c5aae91b3cefa
+2026-10-13T06:22:22.372264Z 01E WARNING: file does not exist                       
+2026-10-13T06:22:22.374191Z 01O Failed to extract cache
+2026-10-13T06:22:22.425018Z 01O Checking cache for pip-offline-python311-58e3f6ea5a80481bee8b6d6a945c3a888c6fab20-protected...
+2026-10-13T06:22:22.472198Z 01E Using presigned URL for cache download             
+2026-10-13T06:22:22.539073Z 01E Selecting primary cache URL                         alternate_modified=0001-01-01 00:00:00 +0000 UTC alternate_url=https://storage.googleapis.com/gitlab-com-runners-cache/project/87551374/pip-offline-python311-58e3f6ea5a80481bee8b6d6a945c3a888c6fab20-protected primary_modified=0001-01-01 00:00:00 +0000 UTC primary_url=https://storage.googleapis.com/gitlab-com-runners-cache/project/87551374/68/68aa6ece23d47fff6abcf5ca3f1c10c992cb893745f86331235d52f453f9a441
+2026-10-13T06:22:22.561651Z 01E WARNING: file does not exist                       
+2026-10-13T06:22:22.563007Z 01O Failed to extract cache
+2026-10-13T06:22:22.714625Z 00O section_end:1791872542:restore_cache
+
+2026-10-13T06:22:22.715162Z 00O+section_start:1791872542:step_script
+
+2026-10-13T06:22:22.715171Z 00O+Executing "step_script" stage of the job script
+2026-10-13T06:22:22.715181Z 00O Using effective pull policy of [always] for container nikolaik/python-nodejs:python3.11-nodejs20
+2026-10-13T06:22:22.716579Z 00O Using docker image sha256:d14ae8d7fcee933e82c9f62eded621110f227bc96363ca5449d36897af7bea1c for nikolaik/python-nodejs:python3.11-nodejs20 with digest nikolaik/python-nodejs@sha256:8f958bdc1b4a422bfafd97cab4f69836401f616ae985d4b57a53d254f5bcb038 ...
+2026-10-13T06:22:23.040650Z 01O $ python --version
+2026-10-13T06:22:23.042165Z 01O Python 3.11.15
+2026-10-13T06:22:23.042555Z 01O $ node --version
+2026-10-13T06:22:23.045107Z 01O v20.20.2
+2026-10-13T06:22:23.045807Z 01O $ pip install -r requirements.txt
+2026-10-13T06:22:23.400284Z 01O Collecting fastapi==0.111.0 (from -r requirements.txt (line 1))
+2026-10-13T06:22:23.457367Z 01O   Downloading fastapi-0.111.0-py3-none-any.whl.metadata (25 kB)
+2026-10-13T06:22:23.494149Z 01O Collecting mangum==0.17.0 (from -r requirements.txt (line 2))
+2026-10-13T06:22:23.510016Z 01O   Downloading mangum-0.17.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-13T06:22:23.549026Z 01O Collecting starlette<0.38.0,>=0.37.2 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.563271Z 01O   Downloading starlette-0.37.2-py3-none-any.whl.metadata (5.9 kB)
+2026-10-13T06:22:23.694334Z 01O Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.708979Z 01O   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+2026-10-13T06:22:23.763593Z 01O Collecting typing-extensions>=4.8.0 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.778085Z 01O   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-13T06:22:23.806790Z 01O Collecting fastapi-cli>=0.0.2 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.821154Z 01O   Downloading fastapi_cli-0.0.32-py3-none-any.whl.metadata (6.7 kB)
+2026-10-13T06:22:23.852834Z 01O Collecting httpx>=0.23.0 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.867088Z 01O   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-10-13T06:22:23.897549Z 01O Collecting jinja2>=2.11.2 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.911770Z 01O   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-10-13T06:22:23.940052Z 01O Collecting python-multipart>=0.0.7 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:23.954118Z 01O   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+2026-10-13T06:22:24.033382Z 01O Collecting ujson!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0,>=4.0.1 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:24.048084Z 01O   Downloading ujson-6.0.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (10.0 kB)
+2026-10-13T06:22:24.294920Z 01O Collecting orjson>=3.2.1 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:24.309382Z 01O   Downloading orjson-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (42 kB)
+2026-10-13T06:22:24.340458Z 01O Collecting email_validator>=2.0.0 (from fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:24.354675Z 01O   Downloading email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+2026-10-13T06:22:24.396059Z 01O Collecting uvicorn>=0.12.0 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:24.410678Z 01O   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+2026-10-13T06:22:24.438521Z 01O Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:24.453192Z 01O   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+2026-10-13T06:22:25.042322Z 01O Collecting pydantic-core==2.50.1 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.056983Z 01O   Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+2026-10-13T06:22:25.084796Z 01O Collecting typing-inspection>=0.4.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.099515Z 01O   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+2026-10-13T06:22:25.131869Z 01O Collecting anyio<5,>=3.4.0 (from starlette<0.38.0,>=0.37.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.146179Z 01O   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+2026-10-13T06:22:25.175323Z 01O Collecting idna>=2.8 (from anyio<5,>=3.4.0->starlette<0.38.0,>=0.37.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.189580Z 01O   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-10-13T06:22:25.219068Z 01O Collecting dnspython>=2.0.0 (from email_validator>=2.0.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.234794Z 01O   Downloading dnspython-2.9.0-py3-none-any.whl.metadata (5.7 kB)
+2026-10-13T06:22:25.308516Z 01O Collecting typer>=0.16.0 (from fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.322891Z 01O   Downloading typer-0.27.3-py3-none-any.whl.metadata (16 kB)
+2026-10-13T06:22:25.358737Z 01O Collecting rich-toolkit>=0.14.8 (from fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.372933Z 01O   Downloading rich_toolkit-0.20.6-py3-none-any.whl.metadata (3.0 kB)
+2026-10-13T06:22:25.379533Z 01O Requirement already satisfied: certifi in /usr/local/lib/python3.11/site-packages (from httpx>=0.23.0->fastapi==0.111.0->-r requirements.txt (line 1)) (2026.2.25)
+2026-10-13T06:22:25.415691Z 01O Collecting httpcore==1.* (from httpx>=0.23.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.430345Z 01O   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-10-13T06:22:25.459348Z 01O Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.23.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.473687Z 01O   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-10-13T06:22:25.537955Z 01O Collecting MarkupSafe>=2.0 (from jinja2>=2.11.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.552268Z 01O   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-10-13T06:22:25.584209Z 01O Collecting click>=8.1.7 (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.598299Z 01O   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+2026-10-13T06:22:25.638359Z 01O Collecting rich>=13.7.1 (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.652855Z 01O   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+2026-10-13T06:22:25.684840Z 01O Collecting markdown-it-py>=2.2.0 (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.699191Z 01O   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+2026-10-13T06:22:25.733770Z 01O Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.748167Z 01O   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-13T06:22:25.774807Z 01O Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.788876Z 01O   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-10-13T06:22:25.816727Z 01O Collecting shellingham>=1.3.0 (from typer>=0.16.0->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.831277Z 01O   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-10-13T06:22:25.858808Z 01O Collecting annotated-doc>=0.0.2 (from typer>=0.16.0->fastapi-cli>=0.0.2->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.872852Z 01O   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+2026-10-13T06:22:25.925104Z 01O Collecting httptools>=0.8.0 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.939340Z 01O   Downloading httptools-0.9.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+2026-10-13T06:22:25.970142Z 01O Collecting python-dotenv>=0.13 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:25.984499Z 01O   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+2026-10-13T06:22:26.032356Z 01O Collecting pyyaml>=5.1 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:26.046671Z 01O   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-10-13T06:22:26.095193Z 01O Collecting uvloop>=0.15.1 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:26.109442Z 01O   Downloading uvloop-0.23.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+2026-10-13T06:22:26.187212Z 01O Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:26.201716Z 01O   Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+2026-10-13T06:22:26.313111Z 01O Collecting websockets>=13.0 (from uvicorn[standard]>=0.12.0->fastapi==0.111.0->-r requirements.txt (line 1))
+2026-10-13T06:22:26.327571Z 01O   Downloading websockets-17.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+2026-10-13T06:22:26.353831Z 01O Downloading fastapi-0.111.0-py3-none-any.whl (91 kB)
+2026-10-13T06:22:26.375179Z 01O Downloading mangum-0.17.0-py3-none-any.whl (17 kB)
+2026-10-13T06:22:26.394136Z 01O Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+2026-10-13T06:22:26.431046Z 01O Downloading pydantic_core-2.50.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+2026-10-13T06:22:26.464447Z 01O    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 62.8 MB/s  0:00:00
+2026-10-13T06:22:26.479063Z 01O Downloading starlette-0.37.2-py3-none-any.whl (71 kB)
+2026-10-13T06:22:26.498984Z 01O Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+2026-10-13T06:22:26.517906Z 01O Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+2026-10-13T06:22:26.536051Z 01O Downloading email_validator-2.3.0-py3-none-any.whl (35 kB)
+2026-10-13T06:22:26.555009Z 01O Downloading dnspython-2.9.0-py3-none-any.whl (354 kB)
+2026-10-13T06:22:26.575170Z 01O Downloading fastapi_cli-0.0.32-py3-none-any.whl (14 kB)
+2026-10-13T06:22:26.593925Z 01O Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-10-13T06:22:26.613324Z 01O Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-10-13T06:22:26.632027Z 01O Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+2026-10-13T06:22:26.650390Z 01O Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-10-13T06:22:26.670127Z 01O Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-10-13T06:22:26.689266Z 01O Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-10-13T06:22:26.707752Z 01O Downloading orjson-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+2026-10-13T06:22:26.727656Z 01O Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+2026-10-13T06:22:26.746824Z 01O Downloading rich_toolkit-0.20.6-py3-none-any.whl (39 kB)
+2026-10-13T06:22:26.765698Z 01O Downloading click-8.5.0-py3-none-any.whl (125 kB)
+2026-10-13T06:22:26.784672Z 01O Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+2026-10-13T06:22:26.805542Z 01O Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-13T06:22:26.817225Z 01O    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 106.3 MB/s  0:00:00
+2026-10-13T06:22:26.832209Z 01O Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+2026-10-13T06:22:26.851265Z 01O Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-10-13T06:22:26.869101Z 01O Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+2026-10-13T06:22:26.888822Z 01O Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+2026-10-13T06:22:26.906635Z 01O Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-10-13T06:22:26.925019Z 01O Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-13T06:22:26.944028Z 01O Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+2026-10-13T06:22:26.961940Z 01O Downloading ujson-6.0.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (56 kB)
+2026-10-13T06:22:26.980345Z 01O Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+2026-10-13T06:22:26.999434Z 01O Downloading httptools-0.9.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (499 kB)
+2026-10-13T06:22:27.022194Z 01O Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+2026-10-13T06:22:27.040938Z 01O Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-10-13T06:22:27.050814Z 01O    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 72.0 MB/s  0:00:00
+2026-10-13T06:22:27.065700Z 01O Downloading uvloop-0.23.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.0 MB)
+2026-10-13T06:22:27.094745Z 01O    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 142.9 MB/s  0:00:00
+2026-10-13T06:22:27.109633Z 01O Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+2026-10-13T06:22:27.130045Z 01O Downloading websockets-17.2-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (225 kB)
+2026-10-13T06:22:27.274959Z 01O Installing collected packages: websockets, uvloop, ujson, typing-extensions, shellingham, pyyaml, python-multipart, python-dotenv, pygments, orjson, mdurl, MarkupSafe, idna, httptools, h11, dnspython, click, annotated-types, annotated-doc, uvicorn, typing-inspection, pydantic-core, markdown-it-py, mangum, jinja2, httpcore, email_validator, anyio, watchfiles, starlette, rich, pydantic, httpx, typer, rich-toolkit, fastapi-cli, fastapi
+2026-10-13T06:22:29.585552Z 01O 
+2026-10-13T06:22:29.587656Z 01O Successfully installed MarkupSafe-3.0.4 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click-8.5.0 dnspython-2.9.0 email_validator-2.3.0 fastapi-0.111.0 fastapi-cli-0.0.32 h11-0.16.0 httpcore-1.0.9 httptools-0.9.0 httpx-0.28.1 idna-3.20 jinja2-3.1.6 mangum-0.17.0 markdown-it-py-4.2.0 mdurl-0.1.2 orjson-3.13.0 pydantic-2.14.1 pydantic-core-2.50.1 pygments-2.21.0 python-dotenv-1.2.4 python-multipart-0.0.32 pyyaml-6.0.3 rich-15.0.0 rich-toolkit-0.20.6 shellingham-1.5.4 starlette-0.37.2 typer-0.27.3 typing-extensions-4.16.0 typing-inspection-0.4.4 ujson-6.0.0 uvicorn-0.54.0 uvloop-0.23.0 watchfiles-1.3.0 websockets-17.2
+2026-10-13T06:22:29.587758Z 01E WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+2026-10-13T06:22:29.689537Z 01E 
+2026-10-13T06:22:29.689546Z 01E [notice] A new release of pip is available: 26.0.1 -> 26.2.1
+2026-10-13T06:22:29.689548Z 01E [notice] To update, run: pip install --upgrade pip
+2026-10-13T06:22:29.933832Z 01O $ npm ci --cache .npm --prefer-offline
+2026-10-13T06:22:32.561634Z 01E npm warn deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+2026-10-13T06:22:32.971991Z 01E npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+2026-10-13T06:22:33.146102Z 01E npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T06:22:33.250748Z 01E npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T06:22:33.725164Z 01E npm warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T06:22:33.848850Z 01E npm warn deprecated cron-parser@4.9.0: v4 is no longer maintained, upgrade to v5
+2026-10-13T06:22:33.986119Z 01E npm warn deprecated superagent@7.1.6: Please upgrade to superagent v10.2.2+, see release notes at https://github.com/forwardemail/superagent/releases/tag/v10.2.2 - maintenance is supported by Forward Email @ https://forwardemail.net
+2026-10-13T06:22:34.535560Z 01E npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+2026-10-13T06:22:34.572352Z 01E npm warn deprecated uuid@9.0.1: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-10-13T06:22:34.660734Z 01E npm warn deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+2026-10-13T06:22:34.946027Z 01E npm warn deprecated uuid@8.0.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-10-13T06:22:35.021354Z 01E npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-10-13T06:22:35.025031Z 01E npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+2026-10-13T06:22:40.619594Z 01E npm warn deprecated aws-sdk@2.1693.0: The AWS SDK for JavaScript (v2) has reached end-of-support, and no longer receives updates. Please migrate your code to use AWS SDK for JavaScript (v3). More info https://a.co/cUPnyil
+2026-10-13T06:22:40.894232Z 01O 
+2026-10-13T06:22:40.894241Z 01O added 635 packages, and audited 636 packages in 11s
+2026-10-13T06:22:40.894255Z 01O 
+2026-10-13T06:22:40.894256Z 01O 161 packages are looking for funding
+2026-10-13T06:22:40.894257Z 01O   run `npm fund` for details
+2026-10-13T06:22:41.003002Z 01O 
+2026-10-13T06:22:41.003009Z 01O 23 vulnerabilities (10 moderate, 9 high, 4 critical)
+2026-10-13T06:22:41.003011Z 01O 
+2026-10-13T06:22:41.003011Z 01O To address issues that do not require attention, run:
+2026-10-13T06:22:41.003012Z 01O   npm audit fix
+2026-10-13T06:22:41.003013Z 01O 
+2026-10-13T06:22:41.003013Z 01O To address all issues (including breaking changes), run:
+2026-10-13T06:22:41.003014Z 01O   npm audit fix --force
+2026-10-13T06:22:41.003014Z 01O 
+2026-10-13T06:22:41.003015Z 01O Run `npm audit` for details.
+2026-10-13T06:22:41.017730Z 01O $ python scripts/smoke_offline.py
+2026-10-13T06:22:45.360676Z 01O RESPUESTA /hello: {"message": "Hello, Aaron!", "source": "FastAPI"}
+2026-10-13T06:22:45.364023Z 01O RESPUESTA /add: {"result": 5}
+2026-10-13T06:22:45.399062Z 01O Smoke test offline: OK
+2026-10-13T06:22:47.607175Z 00O section_end:1791872567:step_script
+
+2026-10-13T06:22:47.607665Z 00O+section_start:1791872567:after_script
+
+2026-10-13T06:22:47.607674Z 00O+Running after_script
+2026-10-13T06:22:47.934235Z 01O Running after script...
+2026-10-13T06:22:47.934271Z 01O $ cat evidencias/ci/offline.log || true
+2026-10-13T06:22:47.934847Z 01O Starting Offline at stage dev (us-east-1)
+2026-10-13T06:22:47.934858Z 01O 
+2026-10-13T06:22:47.934859Z 01O Offline [http for lambda] listening on http://127.0.0.1:3002
+2026-10-13T06:22:47.934860Z 01O Function names exposed for local invocation by aws-sdk:
+2026-10-13T06:22:47.934861Z 01O    * api: gitlab-lambda-demo-dev-api
+2026-10-13T06:22:47.934862Z 01O 
+2026-10-13T06:22:47.934862Z 01O    ┌───────────────────────────────────────────────────────────────────────┐
+2026-10-13T06:22:47.934865Z 01O    │                                                                       │
+2026-10-13T06:22:47.934866Z 01O    │   GET  | http://127.0.0.1:3000/hello                                  │
+2026-10-13T06:22:47.934867Z 01O    │   POST | http://127.0.0.1:3000/2015-03-31/functions/api/invocations   │
+2026-10-13T06:22:47.934868Z 01O    │   GET  | http://127.0.0.1:3000/add                                    │
+2026-10-13T06:22:47.934868Z 01O    │   POST | http://127.0.0.1:3000/2015-03-31/functions/api/invocations   │
+2026-10-13T06:22:47.934869Z 01O    │                                                                       │
+2026-10-13T06:22:47.934870Z 01O    └───────────────────────────────────────────────────────────────────────┘
+2026-10-13T06:22:47.934927Z 01O 
+2026-10-13T06:22:47.934928Z 01O Server ready: http://127.0.0.1:3000 🚀
+2026-10-13T06:22:47.934929Z 01O 
+2026-10-13T06:22:47.934929Z 01O 
+2026-10-13T06:22:47.934930Z 01O GET /hello (λ: api)
+2026-10-13T06:22:47.934930Z 01O (λ: api) RequestId: f0e45afb-b289-4d30-afb9-1fc12b38adb3  Duration: 273.22 ms  Billed Duration: 274 ms
+2026-10-13T06:22:47.934931Z 01O 
+2026-10-13T06:22:47.934932Z 01O 
+2026-10-13T06:22:47.934932Z 01O GET /hello (λ: api)
+2026-10-13T06:22:47.934933Z 01O (λ: api) RequestId: e5ec7f17-94b7-4bea-9280-e6c7a921adf8  Duration: 1.43 ms  Billed Duration: 2 ms
+2026-10-13T06:22:47.934933Z 01O 
+2026-10-13T06:22:47.934934Z 01O 
+2026-10-13T06:22:47.934934Z 01O GET /add (λ: api)
+2026-10-13T06:22:47.934935Z 01O (λ: api) RequestId: 9b379873-bf5d-4e74-b682-5d1767188d60  Duration: 1.29 ms  Billed Duration: 2 ms
+2026-10-13T06:22:47.934936Z 01O 
+2026-10-13T06:22:47.934936Z 01O 
+2026-10-13T06:22:47.934936Z 01O GET /add (λ: api)
+2026-10-13T06:22:47.934937Z 01O (λ: api) RequestId: ee926999-cf3e-4418-8e82-b8dc41679e56  Duration: 0.91 ms  Billed Duration: 1 ms
+2026-10-13T06:22:48.086059Z 00O section_end:1791872568:after_script
+
+2026-10-13T06:22:48.236876Z 00O+section_start:1791872568:archive_cache
+
+2026-10-13T06:22:48.236890Z 00O+Saving cache for successful job
+2026-10-13T06:22:48.625117Z 01O Creating cache npm-node20-02cf922d233c639b0b52aaddabe92d6b7a651b2e-protected...
+2026-10-13T06:22:48.705703Z 01E .npm/: found 3244 matching artifact files and directories 
+2026-10-13T06:22:48.909081Z 01E Using presigned URL for cache upload               
+2026-10-13T06:22:48.909092Z 01E Uploading cache.zip to https://storage.googleapis.com/gitlab-com-runners-cache/project/87551374/e0/e0fbd6314495a313d05d8b565cf97b5ca8243833536f0cb8918c5aae91b3cefa 
+2026-10-13T06:22:49.228617Z 01O Created cache
+2026-10-13T06:22:49.282940Z 01O Creating cache pip-offline-python311-58e3f6ea5a80481bee8b6d6a945c3a888c6fab20-protected...
+2026-10-13T06:22:49.339548Z 01E .cache/pip/: found 674 matching artifact files and directories 
+2026-10-13T06:22:49.387639Z 01E Using presigned URL for cache upload               
+2026-10-13T06:22:49.387648Z 01E Uploading cache.zip to https://storage.googleapis.com/gitlab-com-runners-cache/project/87551374/68/68aa6ece23d47fff6abcf5ca3f1c10c992cb893745f86331235d52f453f9a441 
+2026-10-13T06:22:49.675503Z 01O Created cache
+2026-10-13T06:22:50.184528Z 00O section_end:1791872570:archive_cache
+
+2026-10-13T06:22:50.184966Z 00O+section_start:1791872570:upload_artifacts_on_success
+
+2026-10-13T06:22:50.184977Z 00O+Uploading artifacts for successful job
+2026-10-13T06:22:50.577684Z 01O Uploading artifacts...
+2026-10-13T06:22:50.627084Z 01E evidencias/ci/: found 5 matching artifact files and directories 
+2026-10-13T06:22:51.310357Z 01E Uploading artifacts as "archive" to coordinator... 201 Created  correlation_id=cc4ce0e895834fe8b1a48ba616147a58 id=17130257925 status=201 token=[OMITIDO]
+2026-10-13T06:22:51.461243Z 00O section_end:1791872571:upload_artifacts_on_success
+
+2026-10-13T06:22:51.461642Z 00O+section_start:1791872571:cleanup_file_variables
+
+2026-10-13T06:22:51.461650Z 00O+Cleaning up project directory and file based variables
+2026-10-13T06:22:51.981639Z 00O section_end:1791872571:cleanup_file_variables
+
+2026-10-13T06:22:52.065880Z 00O Job succeeded

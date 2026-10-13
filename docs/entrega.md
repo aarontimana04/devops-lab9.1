@@ -14,26 +14,31 @@ GitHub conserva código y evidencias por solicitud del alumno.
 | Coverage API/handler | 100 % | evidencias/local/coverage.xml; excluye inicio manual Uvicorn |
 | Serverless v3 offline | Verificado localmente | evidencias/local/offline.log |
 | /hello y /add JSON | Verificado localmente | hello.json, add.json, respuestas.log |
-| Pipeline cinco jobs en verde | Bloqueado por identidad | Pipeline 2941149714; 09-bloqueo-verificacion.png |
+| Pipeline cinco jobs en verde | Verificado en GitLab | Pipeline 2941167512; 01-pipeline.png |
 | Runner laptop Online | Verificado en GitLab | 02-runner-online.png, ID 57342024 |
-| whoami en laptop | Pendiente | Log con nombre e ID del runner local |
-| test en runner GitLab | Pendiente | Log con nombre e ID de instance runner |
+| whoami en laptop | Verificado en GitLab | 03-whoami-laptop.png; evidencias/ci/whoami.log |
+| test en runner GitLab | Verificado en GitLab | 04-test-gitlab.png; evidencias/ci/test.log |
 | Imagen runner en Docker Desktop | Verificado | 05-docker-runner.png |
 | Terminal Server ready + curl | Servidor y JSON verificados; captura de terminal pendiente | offline.log y 06-offline-local.png (navegador) |
-| Job offline con RESPUESTA /hello y /add | Script preparado; ejecución CI pendiente | Captura del log remoto |
-| Artifacts pasados entre jobs | Configurado; CI pendiente | Informe generado por docs |
-| Cache acelera ejecuciones | Configurado; no medido | Comparar primer y segundo pipeline |
+| Job offline con RESPUESTA /hello y /add | Verificado en GitLab | 07-offline-job.png y offline-job.log |
+| Artifacts pasados entre jobs | Descargados y verificados | artifacts-docs.zip e informe-pipeline.md |
+| Cache pip/npm | Restauración verificada | Segunda ejecución 2941199447; cache-pip.log y cache-npm-pip.log |
 
 Capturas sugeridas: `01-pipeline.png`, `02-runner-online.png`,
 `03-whoami-laptop.png`, `04-test-gitlab.png`, `05-docker-runner.png`,
 `06-offline-local.png`, `07-offline-job.png`. Guardarlas en `evidencias/capturas/`.
 Deben corresponder a ejecuciones reales; no usar las imágenes de ejemplo del PDF.
 
-## Bloqueo externo observado
+## Resultado remoto
 
-GitLab exige al titular verificar su identidad antes de ejecutar pipelines.
-El pipeline [2941149714](https://gitlab.com/aaron.timana/gitlab_lambda_demo/-/pipelines/2941149714)
-se creó para el commit `51c7f62a7cdeb2195aaece6db5d116acff2f818b`, pero no ejecutó
-los jobs. La pantalla mostró "Verify your identity to run this pipeline".
-La verificación se completa en https://gitlab.com/-/identity_verification.
-Después, crear un nuevo pipeline de main y verificar cada job y sus artifacts.
+Pipeline 2941167512: cinco jobs aprobados. El primer intento 2941149714 quedó
+bloqueado por identidad; el titular completó la verificación y se lanzó una
+ejecución nueva. La captura 09 conserva ese antecedente, no el estado actual.
+
+Se descargó el artifact del job docs y se verificó el ZIP, las fuentes del
+paquete, 16 tests con cero fallos, cobertura 100 % y ambos JSON. Los prefijos
+de tokens de los logs se omiten al publicarlos en GitHub.
+
+La captura de la API local en navegador está guardada. Falta únicamente la
+captura literal de la terminal local con Server ready; el funcionamiento
+está acreditado por offline.log y las respuestas reales.

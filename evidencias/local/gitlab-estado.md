@@ -8,5 +8,7 @@
 - Tag laptop; Run untagged jobs desmarcado; limitado al proyecto.
 - Instance runners habilitados.
 - Wilson Julca (@pytuxi) figura como miembro Reporter.
-- Pipeline 2941149714 bloqueado antes de ejecutar jobs por verificación de identidad.
+- Primer intento 2941149714 bloqueado por identidad; bloqueo resuelto por el titular.
+- Pipeline 2941167512: whoami, test, offline, package y docs aprobados.
+- Artifacts descargados y verificados: 16 tests sin fallos, cobertura 100 %, fuentes y JSON correctos.
 - Los tokens, teléfono y datos de verificación no se guardan en el repositorio.

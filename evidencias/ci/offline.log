@@ -1,0 +1,32 @@
+Starting Offline at stage dev (us-east-1)
+
+Offline [http for lambda] listening on http://127.0.0.1:3002
+Function names exposed for local invocation by aws-sdk:
+   * api: gitlab-lambda-demo-dev-api
+
+   ┌───────────────────────────────────────────────────────────────────────┐
+   │                                                                       │
+   │   GET  | http://127.0.0.1:3000/hello                                  │
+   │   POST | http://127.0.0.1:3000/2015-03-31/functions/api/invocations   │
+   │   GET  | http://127.0.0.1:3000/add                                    │
+   │   POST | http://127.0.0.1:3000/2015-03-31/functions/api/invocations   │
+   │                                                                       │
+   └───────────────────────────────────────────────────────────────────────┘
+
+Server ready: http://127.0.0.1:3000 🚀
+
+
+GET /hello (λ: api)
+(λ: api) RequestId: f0e45afb-b289-4d30-afb9-1fc12b38adb3  Duration: 273.22 ms  Billed Duration: 274 ms
+
+
+GET /hello (λ: api)
+(λ: api) RequestId: e5ec7f17-94b7-4bea-9280-e6c7a921adf8  Duration: 1.43 ms  Billed Duration: 2 ms
+
+
+GET /add (λ: api)
+(λ: api) RequestId: 9b379873-bf5d-4e74-b682-5d1767188d60  Duration: 1.29 ms  Billed Duration: 2 ms
+
+
+GET /add (λ: api)
+(λ: api) RequestId: ee926999-cf3e-4418-8e82-b8dc41679e56  Duration: 0.91 ms  Billed Duration: 1 ms

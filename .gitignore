@@ -17,3 +17,7 @@ dist/
 !.env.example
 runner/config/
 .DS_Store
+
+# Evidencias remotas descargadas para la entrega
+!evidencias/ci/test-results.xml
+!evidencias/ci/coverage.xml

@@ -1,0 +1,248 @@
+docs
+Passed
+ Started 1 minute ago by 
+Aarón Timaná Castro
+Passed
+docs
+Log timestamps in UTC.
+1
+06:23:10
+Running with gitlab-runner 19.5.0~pre.2302.g6414598a (6414598a)
+2
+06:23:10
+  on k8s.saas-linux-small-amd64.runners-manager.gitlab.com/default nezyxEJex, system ID: r_fdnau7fZQIak
+3
+06:23:10
+  UUID: 019fd6c6-56c4-78a2-8961-bbb53e204387
+4
+06:23:10
+  feature flags: FF_USE_GIT_PROACTIVE_AUTH:true, FF_HASH_CACHE_KEYS:true, FF_MACHINE_OPTIONS_EXPAND_ENV:true, FF_DOCKER_MACHINE_JSON_OUTPUT:true
+5
+06:23:10
+Preparing the "docker+machine" executor
+00:07
+6
+06:23:10
+Using Docker executor with image python:3.11-slim ...
+7
+06:23:10
+Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a  (overridden, default would be  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-v19.5.0 )
+8
+06:23:10
+Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a
+9
+06:23:10
+Authenticating with credentials from job payload (GitLab Registry)
+10
+06:23:10
+Pulling docker image registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a ...
+11
+06:23:12
+Using docker image sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:932a5e67332b363468a001dc40a6195a6671eb5f6e449ea3edaf6cbcc6e1d2af ...
+12
+06:23:14
+Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a  (overridden, default would be  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-v19.5.0 )
+13
+06:23:14
+Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a
+14
+06:23:14
+Using docker image sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:932a5e67332b363468a001dc40a6195a6671eb5f6e449ea3edaf6cbcc6e1d2af ...
+15
+06:23:14
+Using effective pull policy of [always] for container python:3.11-slim
+16
+06:23:14
+Pulling docker image python:3.11-slim ...
+17
+06:23:17
+Using docker image sha256:541096ae9b05d3b850341b78790e2ed31e94d5aa0ea086933c6ff0c09ffa2e63 for python:3.11-slim with digest python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce ...
+18
+06:23:17
+Preparing environment
+00:01
+19
+06:23:17
+Using helper image:  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a  (overridden, default would be  registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-v19.5.0 )
+20
+06:23:17
+Using effective pull policy of [always] for container registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a
+21
+06:23:17
+Using docker image sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28 for registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper:x86_64-6414598a with digest registry.gitlab.com/gitlab-org/gitlab-runner/gitlab-runner-helper@sha256:932a5e67332b363468a001dc40a6195a6671eb5f6e449ea3edaf6cbcc6e1d2af ...
+22
+06:23:17
+Using effective pull policy of [always] for container sha256:91e23c631f2addcce465d04b460a9ce1ba505e38c66038b8d03bd4f2b732ae28
+23
+06:23:18
+Running on runner-nezyxejex-project-87551374-concurrent-0 via runner-nezyxejex-s-l-s-amd64-1791872457-c4803a17...
+24
+06:23:18
+Running on CPU: INTEL(R) XEON(R) PLATINUM 8581C CPU @ 2.10GHz (avx, avx2, avx512f)
+25
+06:23:18
+Getting source from Git repository
+00:01
+26
+06:23:18
+Gitaly correlation ID: 6da2268941e54323902095ca772e15a8
+27
+06:23:18
+Fetching changes with git depth set to 20...
+28
+06:23:18
+Initialized empty Git repository in /builds/aaron.timana/gitlab_lambda_demo/.git/
+29
+06:23:18
+Created fresh repository.
+30
+06:23:19
+Checking out 51c7f62a as detached HEAD (ref is main)...
+31
+06:23:19
+Skipping Git submodules setup
+32
+06:23:19
+$ git remote set-url origin "${CI_REPOSITORY_URL}" || echo 'Not a git repository; skipping'
+33
+06:23:19
+Downloading artifacts
+00:02
+34
+06:23:19
+Downloading artifacts for test (17130257924)...
+35
+06:23:20
+Direct download from storage.googleapis.com         correlation_id=95948f179cd54a9080725db2c0c4fc6e id=17130257924 status=302 token=[OMITIDO]
+36
+06:23:20
+Downloading artifacts from coordinator... ok        correlation_id=95948f179cd54a9080725db2c0c4fc6e id=17130257924 status=302 token=[OMITIDO]
+37
+06:23:20
+Downloading artifacts for offline (17130257925)...
+38
+06:23:20
+Direct download from storage.googleapis.com         correlation_id=15d8a35d5f0541059069301b3a3ba31d id=17130257925 status=302 token=[OMITIDO]
+39
+06:23:20
+Downloading artifacts from coordinator... ok        correlation_id=15d8a35d5f0541059069301b3a3ba31d id=17130257925 status=302 token=[OMITIDO]
+40
+06:23:20
+Downloading artifacts for package (17130257926)...
+41
+06:23:21
+Direct download from storage.googleapis.com         correlation_id=71b3a43b5cc84efca9a80c2f3cbfe4c6 id=17130257926 status=302 token=[OMITIDO]
+42
+06:23:21
+Downloading artifacts from coordinator... ok        correlation_id=71b3a43b5cc84efca9a80c2f3cbfe4c6 id=17130257926 status=302 token=[OMITIDO]
+43
+06:23:21
+Executing "step_script" stage of the job script
+00:00
+44
+06:23:21
+Using effective pull policy of [always] for container python:3.11-slim
+45
+06:23:21
+Using docker image sha256:541096ae9b05d3b850341b78790e2ed31e94d5aa0ea086933c6ff0c09ffa2e63 for python:3.11-slim with digest python@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce ...
+46
+06:23:21
+$ mkdir -p dist # collapsed multi-line command
+47
+06:23:21
+# Evidencia del pipeline
+48
+06:23:21
+Proyecto: aaron.timana/gitlab_lambda_demo
+49
+06:23:21
+Commit: 51c7f62a7cdeb2195aaece6db5d116acff2f818b
+50
+06:23:21
+Pipeline: https://gitlab.com/aaron.timana/gitlab_lambda_demo/-/pipelines/2941167512
+51
+06:23:21
+Runner del job docs: k8s.saas-linux-small-amd64.runners-manager.gitlab.com/default 
+52
+06:23:21
+RESPUESTA /hello: {"message": "Hello, Aaron!", "source": "FastAPI"}
+53
+06:23:21
+RESPUESTA /add: {"result": 5}
+54
+06:23:21
+HTTP 422 validado
+55
+06:23:21
+Artifacts de test, offline y package recibidos y verificados.
+56
+06:23:21
+Uploading artifacts for successful job
+00:02
+57
+06:23:22
+Uploading artifacts...
+58
+06:23:22
+dist/informe-pipeline.md: found 1 matching artifact files and directories 
+59
+06:23:22
+dist/app-source.zip: found 1 matching artifact files and directories 
+60
+06:23:22
+test-results.xml: found 1 matching artifact files and directories 
+61
+06:23:22
+coverage.xml: found 1 matching artifact files and directories 
+62
+06:23:22
+evidencias/ci/: found 5 matching artifact files and directories 
+63
+06:23:23
+Uploading artifacts as "archive" to coordinator... 201 Created  correlation_id=24604c22fed54b25bf5779a6a5196fd9 id=17130257927 status=201 token=[OMITIDO]
+64
+06:23:23
+Cleaning up project directory and file based variables
+00:00
+65
+06:23:23
+Job succeeded
+
+Duration
+13 seconds
+
+Finished
+2 minutes ago
+
+Queued
+0 seconds
+
+Timeout
+1h (from project) 
+
+Runner
+#54907241 (nezyxEJe) k8s.saas-linux-small-amd64.runners-manager.gitlab.com/default
+
+Source
+Web
+
+Job artifacts 
+
+These artifacts are the latest. They will not be deleted (even if expired) until newer artifacts are available.
+
+Keep
+Download
+Browse
+
+Commit
+51c7f62a
+
+feat(lab9): add .gitlab-ci.yml
+
+Pipeline #2941167512 
+Passed
+ for main
+docs
+
+Related jobs
+docs
