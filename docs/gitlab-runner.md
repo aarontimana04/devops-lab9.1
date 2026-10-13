@@ -22,7 +22,8 @@ El primer pipeline puede quedar pending hasta que se registre el runner local.
 
 Manage > Members > Invite members. Buscar `@pytuxi` y verificar su perfil.
 Para revisar código privado y pipelines basta el rol **Reporter**.
-No se ha enviado esta invitación; debe autorizarla el propietario.
+El propietario autorizó el acceso y `@pytuxi` ya figura como miembro Reporter.
+La captura `evidencias/capturas/08-acceso-docente.png` lo acredita.
 
 ## 3. Crear el runner en GitLab
 
@@ -89,3 +90,11 @@ Para detener únicamente este runner:
 ```bash
 docker compose -f runner/compose.yml stop
 ```
+
+## Estado registrado en esta laptop
+
+Runner `laptop-aaron-lab9`, ID `57342024`, registrado y **Online**.
+Versión 19.4.1, Linux/arm64, executor Docker, tag `laptop`,
+Run untagged jobs desmarcado y limitado al proyecto actual.
+El contenedor `devops-lab9-runner` está activo. El token se conserva únicamente
+en `runner/config/config.toml`, ignorado por Git.

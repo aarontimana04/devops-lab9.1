@@ -1,0 +1,7 @@
+Container: /devops-lab9-runner\nImage: gitlab/gitlab-runner:alpine\nState: running
+Version:      19.4.1
+Git revision: 3c39fceb
+Git branch:   19-4-stable
+GO version:   go1.26.5
+Built:        2026-09-24T03:56:12Z
+OS/Arch:      linux/arm64

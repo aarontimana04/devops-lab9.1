@@ -1,0 +1,7 @@
+Runtime platform                                  [0;m  arch[0;m=arm64 os[0;m=linux pid[0;m=30 revision[0;m=3c39fceb version[0;m=19.4.1
+Running in system-mode.                           [0;m 
+                                                  [0;m 
+Verifying runner... is valid                      [0;m  correlation_id[0;m=a49c1cddbafdb53e-LIM runner[0;m=aGzpPjI-R runner_name[0;m=laptop-aaron-lab9
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+[0;m 
+Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml"[0;m 

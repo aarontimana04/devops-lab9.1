@@ -41,10 +41,16 @@ reutilizar entradas incompatibles cuando cambian las versiones.
 
 La validación local se completó. La validación YAML local comprueba sintaxis y
 tipos de scripts, pero no reemplaza CI Lint ni la ejecución GitLab.
-El pipeline remoto, el registro del runner, la invitación al docente y sus
-capturas siguen pendientes de autorización/autenticación de GitLab.
-No se han inventado jobs en verde ni evidencias de un runner Online.
+El runner local está registrado y Online, y el docente tiene acceso Reporter.
+Se conservan capturas reales de ambos estados. El código se guardó también en GitLab. El pipeline remoto y sus logs
+siguen pendientes: GitLab bloquea la ejecución hasta verificar la identidad
+del titular de la cuenta (pipeline 2941149714).
+La condición Online se verificó en GitLab. No se han inventado jobs en verde.
 
 El ZIP contiene fuentes y requirements, no dependencias binarias para Lambda.
 El empaquetado desplegable, credenciales AWS y Serverless v4 corresponden al
 laboratorio de Bitbucket mencionado por el docente.
+
+También se ejecutaron las 16 pruebas en Docker Linux/arm64 con Python 3.11,
+con 100 % de cobertura. Los resultados están en `python311-tests.log`,
+`python311-test-results.xml` y `python311-coverage.xml`.

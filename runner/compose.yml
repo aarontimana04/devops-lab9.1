@@ -1,6 +1,6 @@
 services:
   gitlab-runner:
-    image: gitlab/gitlab-runner:alpine
+    image: gitlab/gitlab-runner@sha256:4da99e249eb79dc86a27af77b5c5d6cc46445c802b29294441081ae27410159a
     container_name: devops-lab9-runner
     restart: unless-stopped
     volumes:
