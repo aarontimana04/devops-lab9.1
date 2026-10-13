@@ -1,0 +1,3 @@
+RESPUESTA /hello: {"message": "Hello, Aaron!", "source": "FastAPI"}
+RESPUESTA /add: {"result": 5}
+HTTP 422 validado

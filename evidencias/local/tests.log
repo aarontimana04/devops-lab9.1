@@ -1,0 +1,53 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-8.1.1, pluggy-1.6.0 -- /Users/usuario/Documents/ChatGPT/DevOps/devops-lab9.1/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/usuario/Documents/ChatGPT/DevOps/devops-lab9.1
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-5.0.0, anyio-4.15.1
+collecting ... collected 16 items
+
+tests/test_handler.py::test_lambda_hello[Aaron] PASSED                   [  6%]
+tests/test_handler.py::test_lambda_hello[Mar\xeda Jos\xe9] PASSED        [ 12%]
+tests/test_handler.py::test_lambda_hello[A&B] PASSED                     [ 18%]
+tests/test_handler.py::test_lambda_add PASSED                            [ 25%]
+tests/test_handler.py::test_lambda_invalid_query PASSED                  [ 31%]
+tests/test_handler.py::test_lambda_unknown_route PASSED                  [ 37%]
+tests/test_hello.py::test_greet_default PASSED                           [ 43%]
+tests/test_hello.py::test_greet_custom PASSED                            [ 50%]
+tests/test_hello.py::test_add[2-3-5] PASSED                              [ 56%]
+tests/test_hello.py::test_add[-1-1-0] PASSED                             [ 62%]
+tests/test_hello.py::test_add[0-0-0] PASSED                              [ 68%]
+tests/test_hello.py::test_hello_endpoint PASSED                          [ 75%]
+tests/test_hello.py::test_hello_default PASSED                           [ 81%]
+tests/test_hello.py::test_add_endpoint PASSED                            [ 87%]
+tests/test_hello.py::test_add_validation[a=x&b=3] PASSED                 [ 93%]
+tests/test_hello.py::test_add_validation[a=2] PASSED                     [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/starlette/formparsers.py:12
+  /Users/usuario/Documents/ChatGPT/DevOps/devops-lab9.1/.venv/lib/python3.12/site-packages/starlette/formparsers.py:12: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+.venv/lib/python3.12/site-packages/starlette/testclient.py:41
+  /Users/usuario/Documents/ChatGPT/DevOps/devops-lab9.1/.venv/lib/python3.12/site-packages/starlette/testclient.py:41: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+tests/test_handler.py::test_lambda_hello[Aaron]
+  /Users/usuario/Documents/ChatGPT/DevOps/devops-lab9.1/.venv/lib/python3.12/site-packages/mangum/protocols/lifespan.py:60: DeprecationWarning: There is no current event loop
+    self.loop = asyncio.get_event_loop()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /Users/usuario/Documents/ChatGPT/DevOps/devops-lab9.1/evidencias/local/test-results.xml -
+
+--------- coverage: platform darwin, python 3.12.14-final-0 ----------
+Name         Stmts   Miss  Cover
+--------------------------------
+handler.py       3      0   100%
+hello.py        12      0   100%
+--------------------------------
+TOTAL           15      0   100%
+Coverage XML written to file evidencias/local/coverage.xml
+
+Required test coverage of 90% reached. Total coverage: 100.00%
+======================== 16 passed, 3 warnings in 0.75s ========================

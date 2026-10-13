@@ -1,0 +1,8 @@
+services:
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: devops-lab9-runner
+    restart: unless-stopped
+    volumes:
+      - ./config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock

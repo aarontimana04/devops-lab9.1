@@ -1,0 +1,8 @@
+{
+  "name": "devops-lab9-1",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"offline": "serverless offline"},
+  "devDependencies": {"serverless": "3.40.0", "serverless-offline": "13.9.0"},
+  "engines": {"node": ">=20 <25"}
+}

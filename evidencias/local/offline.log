@@ -1,0 +1,34 @@
+Starting Offline at stage dev (us-east-1)
+
+Offline [http for lambda] listening on http://127.0.0.1:3002
+Function names exposed for local invocation by aws-sdk:
+   * api: gitlab-lambda-demo-dev-api
+
+   ┌───────────────────────────────────────────────────────────────────────┐
+   │                                                                       │
+   │   GET  | http://127.0.0.1:3000/hello                                  │
+   │   POST | http://127.0.0.1:3000/2015-03-31/functions/api/invocations   │
+   │   GET  | http://127.0.0.1:3000/add                                    │
+   │   POST | http://127.0.0.1:3000/2015-03-31/functions/api/invocations   │
+   │                                                                       │
+   └───────────────────────────────────────────────────────────────────────┘
+
+Server ready: http://127.0.0.1:3000 🚀
+
+
+GET /hello (λ: api)
+(node:79308) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(λ: api) RequestId: d57ab8a1-0e5a-42e1-bc24-dadb05618b9f  Duration: 293.79 ms  Billed Duration: 294 ms
+
+
+GET /hello (λ: api)
+(λ: api) RequestId: 2081db1e-ee3e-4201-9c73-72f319a7a95a  Duration: 2.35 ms  Billed Duration: 3 ms
+
+
+GET /add (λ: api)
+(λ: api) RequestId: 948557ac-c6fb-489e-aa65-4eff80667d71  Duration: 1.20 ms  Billed Duration: 2 ms
+
+
+GET /add (λ: api)
+(λ: api) RequestId: 8f62d06b-03ef-4950-a486-464cf697bc09  Duration: 0.93 ms  Billed Duration: 1 ms

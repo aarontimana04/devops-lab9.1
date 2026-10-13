@@ -1,0 +1,25 @@
+service: gitlab-lambda-demo
+frameworkVersion: '3'
+provider:
+  name: aws
+  runtime: python3.11
+  region: ${env:AWS_DEFAULT_REGION, "us-east-1"}
+  stage: ${opt:stage, "dev"}
+plugins:
+  - serverless-offline
+custom:
+  serverless-offline:
+    host: 127.0.0.1
+    httpPort: 3000
+    lambdaPort: 3002
+functions:
+  api:
+    handler: handler.handler
+    description: "API FastAPI del Laboratorio 9"
+    events:
+      - httpApi:
+          path: /hello
+          method: GET
+      - httpApi:
+          path: /add
+          method: GET

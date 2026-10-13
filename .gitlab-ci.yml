@@ -1,0 +1,129 @@
+stages: [info, test, offline, package, docs]
+
+default:
+  image: python:3.11
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  EVIDENCE_DIR: "evidencias/ci"
+
+.python:
+  cache:
+    key:
+      files: [requirements.txt, requirements-dev.txt]
+      prefix: "pip-python311"
+    paths: [.cache/pip/]
+  before_script:
+    - python --version
+    - pip install -r requirements-dev.txt
+
+whoami:
+  stage: info
+  tags: [laptop]
+  script:
+    - |
+      echo "Runner: $CI_RUNNER_DESCRIPTION"
+      echo "Runner ID: $CI_RUNNER_ID"
+      echo "Runner tags: $CI_RUNNER_TAGS"
+      echo "Project: $CI_PROJECT_PATH"
+      uname -a
+      python --version
+
+# Sin needs: test espera que termine el stage info.
+# Sin tags: corre en un instance runner si el local no acepta jobs sin tags.
+test:
+  extends: .python
+  stage: test
+  script:
+    - ruff check hello.py handler.py tests scripts
+    - pytest -v --junitxml=test-results.xml --cov=hello --cov=handler --cov-report=xml --cov-report=html --cov-fail-under=90
+  coverage: '/TOTAL.*\s+(\d+%)$/'
+  artifacts:
+    when: always
+    reports:
+      junit: test-results.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+    paths: [test-results.xml, coverage.xml, htmlcov/]
+    expire_in: 1 week
+
+offline:
+  stage: offline
+  needs:
+    - job: test
+      artifacts: false
+  image: nikolaik/python-nodejs:python3.11-nodejs20
+  cache:
+    - key:
+        files: [package-lock.json]
+        prefix: "npm-node20"
+      paths: [.npm/]
+    - key:
+        files: [requirements.txt]
+        prefix: "pip-offline-python311"
+      paths: [.cache/pip/]
+  before_script:
+    - python --version
+    - node --version
+    - pip install -r requirements.txt
+    - npm ci --cache .npm --prefer-offline
+  script:
+    - python scripts/smoke_offline.py
+  after_script:
+    - cat evidencias/ci/offline.log || true
+  artifacts:
+    when: always
+    paths: [evidencias/ci/]
+    expire_in: 1 week
+
+package:
+  stage: package
+  needs:
+    - job: test
+      artifacts: true
+    - job: offline
+      artifacts: true
+  script:
+    - python scripts/package_app.py
+    - test -s test-results.xml
+    - test -s evidencias/ci/hello.json
+    - test -s evidencias/ci/add.json
+  artifacts:
+    paths: [dist/app-source.zip]
+    expire_in: 1 week
+
+docs:
+  stage: docs
+  needs:
+    - job: test
+      artifacts: true
+    - job: offline
+      artifacts: true
+    - job: package
+      artifacts: true
+  script:
+    - |
+      mkdir -p dist
+      python - <<'PYDOC'
+      import json, os
+      from pathlib import Path
+      from zipfile import ZipFile
+      assert json.loads(Path('evidencias/ci/add.json').read_text()) == {'result': 5}
+      with ZipFile('dist/app-source.zip') as archive:
+          assert archive.testzip() is None
+      report = '\n'.join([
+          '# Evidencia del pipeline',
+          'Proyecto: ' + os.environ['CI_PROJECT_PATH'],
+          'Commit: ' + os.environ['CI_COMMIT_SHA'],
+          'Pipeline: ' + os.environ['CI_PIPELINE_URL'],
+          'Runner del job docs: ' + os.environ['CI_RUNNER_DESCRIPTION'],
+          '', Path('evidencias/ci/respuestas.log').read_text(),
+          'Artifacts de test, offline y package recibidos y verificados.',
+      ])
+      Path('dist/informe-pipeline.md').write_text(report + '\n')
+      print(report)
+      PYDOC
+  artifacts:
+    paths: [dist/informe-pipeline.md, dist/app-source.zip, test-results.xml, coverage.xml, evidencias/ci/]
+    expire_in: 1 week
